@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e236ccb6-3f64-4139-b69a-0702aa6cc2f2" name="Default Changelist" comment="" />
+    <list default="true" id="e236ccb6-3f64-4139-b69a-0702aa6cc2f2" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Homework2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/LinkList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Node.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Homework/Cinema.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Homework/Cinema.class" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,6 +19,9 @@
       <executable />
     </execution>
   </component>
+  <component name="CoverageViewManager">
+    <option name="myElementSize" value="241" />
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -20,7 +29,11 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1zihM1QCfrSKBHB7rlOFcJezMiL" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="Downloaded.Files.Path.Enabled" value="false" />
     <property name="Repository.Attach.Annotations" value="false" />
@@ -28,6 +41,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../FCI1_MAIN" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -44,9 +58,16 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.Cinema.testCalculations">
+  <component name="RunManager" selected="Application.Homework2">
     <configuration name="Homework" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Homework" />
+      <module name="Homework" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Homework2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Homework2" />
       <module name="Homework" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -73,6 +94,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Homework2" />
         <item itemvalue="JUnit.Cinema.testCalculations" />
         <item itemvalue="JUnit.Cinema" />
         <item itemvalue="Application.Homework" />
@@ -89,12 +111,26 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1634636763735</updated>
-      <workItem from="1634636766899" duration="43804000" />
+      <workItem from="1634636766899" duration="45154000" />
+      <workItem from="1635144583613" duration="24868000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -115,25 +151,25 @@
           <option name="timeStamp" value="30" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Cinema.java</url>
-          <line>16</line>
-          <option name="timeStamp" value="32" />
+          <url>file://$PROJECT_DIR$/src/Homework.java</url>
+          <line>13</line>
+          <option name="timeStamp" value="33" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Cinema.java</url>
-          <line>26</line>
-          <option name="timeStamp" value="34" />
+          <url>file://$PROJECT_DIR$/src/Homework2.java</url>
+          <line>137</line>
+          <option name="timeStamp" value="42" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
-        <watch expression="(lastOne - firsOne)%2" language="JAVA" />
-        <watch expression="(k - firstOneInd) / 2" />
+        <watch expression="middle.getNext()" />
       </configuration>
     </watches-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Homework$Homework2.ic" NAME="Homework2 Coverage Results" MODIFIED="1635243194149" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/Homework$Homework.ic" NAME="Homework Coverage Results" MODIFIED="1634887237244" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>
