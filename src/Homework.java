@@ -29,8 +29,7 @@ public class Homework {
         int[] arr6 = {1, 2, 3, 4, 5, 6, 7};
         System.out.println(Arrays.toString(moveArr(arr6, 1)));
 
-        int[] arr7 = {1, 1, 1, 1, 0, 1, 1 };
-        System.out.println("Best place: " + getBestPlace(arr7));
+
     }
 
     // ------------------------------------ Задача 1 -------------------------------------------------------------------

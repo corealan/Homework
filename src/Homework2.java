@@ -1,4 +1,6 @@
 import java.util.Arrays;
+import java.util.HashMap;
+import java.util.HashSet;
 import java.util.LinkedList;
 
 public class Homework2 {
@@ -29,7 +31,12 @@ public class Homework2 {
         list.print();
         System.out.println("------------------");
         rebuilt(list);
+//------------------------------------------------ Задача 3 -----------------------------------------------------------
+        int arr7[] = {1, 2, 3, 5, 1, 2, 3, 5, 12 , 132, 12};
+        System.out.println(getLonely(arr7));
+
     }
+
 
     //------------------------------------------------------- Задача 1 -----------------------------------------------------
     public static int[] arraysMerge(int[] arr1, int[] arr2) {
@@ -141,4 +148,20 @@ public class Homework2 {
         return linkedList;
     }
 
+    //------------------------------------------------------- Задача 3 -----------------------------------------------------
+    private static int getLonely(int[] arr){
+        HashSet<Integer> set = new HashSet<>();
+        final int[] lonely = new int[1];
+        for (int i = 0; i < arr.length; i++){
+            if(set.contains(arr[i])){
+                set.remove(arr[i]);
+            } else {
+                set.add(arr[i]);
+            }
+        }
+        set.forEach(integer -> {
+            lonely[0] = integer;
+        });
+        return lonely[0];
+    }
 }
