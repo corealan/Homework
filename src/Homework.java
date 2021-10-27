@@ -156,39 +156,4 @@ public class Homework {
         return offset;
     }
 
-    private static int getBestPlace(int arr[]) {
-        int firstOneInd = 0;
-        int i = 0;
-        while (arr[i] != 1){
-            i++;
-        }
-        firstOneInd = i;
-        int dist = firstOneInd;
-        i = arr.length - 1;
-        int lastOneInd = i;
-        while (arr[i] != 1){
-            i--;
-        }
-        lastOneInd = i;
-
-        System.out.println(firstOneInd + "   " + lastOneInd);
-        dist = arr.length - 1 - lastOneInd > firstOneInd ? arr.length - 1 -lastOneInd : firstOneInd;
-        System.out.println(dist);
-        for(int k = firstOneInd  + 1; k <= lastOneInd; k++){
-            if(arr[k] == 1){
-                firstOneInd = k;
-            }
-            if((k - firstOneInd) % 2 != 0 && dist < (k - firstOneInd) / 2 + 1){
-                dist = (k - firstOneInd) / 2 + 1;
-                firstOneInd = k;
-            }
-            if(dist < (k - firstOneInd) / 2) {
-                dist = (k - firstOneInd) / 2;
-                firstOneInd = k;
-            }
-        }
-        System.out.println("DIST: " +  dist );
-        return dist;
-    }
-
 }
