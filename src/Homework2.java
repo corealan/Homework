@@ -13,9 +13,9 @@ public class Homework2 {
         int[] arr2 = {1, 10, 12, 16, 24};
 
         int[] arr3 = {30, 26, 25 , 20 , 19, 14, 6, 3};
-        int[] arr4 = {24, 16, 12, 10, 1};
+        int[] arr4 = {24, 26, 12, 10, 1};
 
-        int[] arr5 = {24, 16, 12, 10, 1};
+        int[] arr5 = {26, 16, 12, 10, 1};
         int[] arr6 = {3, 6, 14, 19, 20, 25, 26, 30};
         System.out.println(Arrays.toString(arraysMerge(arr5, arr6)));
 
@@ -60,7 +60,7 @@ public class Homework2 {
         int k = 0;
         int j = 0;
         while (i < arr1.length && j < arr2.length) {
-            if (arr1[i] > arr2[j]) {
+            if (arr1[i] >= arr2[j]) {
                 result[k] = arr2[j];
                 j++;
             } else if (arr1[i] < arr2[j]) {
@@ -88,7 +88,7 @@ public class Homework2 {
         int k = arr1.length + arr2.length - 1;
         int j = arr2.length - 1;
         while (i >= 0  && j >= 0) {
-            if (arr1[i] > arr2[j]) {
+            if (arr1[i] >= arr2[j]) {
                 result[k] = arr2[j];
                 j--;
             } else if (arr1[i] < arr2[j]) {
@@ -116,7 +116,7 @@ public class Homework2 {
         int k = 0;
         int j = arr2.length - 1;
         while (i < arr1.length  && j >= 0) {
-            if (arr1[i] > arr2[j]) {
+            if (arr1[i] >= arr2[j]) {
                 result[k] = arr2[j];
                 j--;
             } else if (arr1[i] < arr2[j]) {
