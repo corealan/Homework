@@ -1,7 +1,8 @@
 package BinaryTreeTask;
 
 public class Homework3 {
-    // Задача 2. Выбрал бы вариант с обходом без рекурсии, т.к если дерево окажется достаточно большим то можно получить переполнение стека
+    // Задача 2. Выбрал бы вариант с обходом без рекурсии, т.к если дерево окажется достаточно большим то можно получить переполнение стека.
+    //Вообще меня не покидает чувство, что можно было бы и как то получше решить, без treeNodes в BinaryTree, наприме :)
     public static void main(String[] args) {
         BinaryTree binaryTree = new BinaryTree();
         TreeNode newNode = new TreeNode(26);
@@ -22,7 +23,7 @@ public class Homework3 {
         binaryTree.addNode(newNode6);
         binaryTree.addNode(newNode8);
         binaryTree.addNode(newNode9);
-        
+
         System.out.println(binaryTree.next(newNode5).getData());
     }
 

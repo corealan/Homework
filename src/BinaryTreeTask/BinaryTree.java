@@ -6,7 +6,7 @@ import java.util.Stack;
 
 public class BinaryTree {
     private TreeNode root;
-    List<TreeNode> treeNodes = new ArrayList<>();
+    private List<TreeNode> treeNodes = new ArrayList<>();
 
 
     //Рекурсивный метод чтобы пройтись по дереву прямым обходом и добавить его узлы в список по порядку
