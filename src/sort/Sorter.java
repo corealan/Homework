@@ -62,7 +62,7 @@ public class Sorter {
             }
         }
     }
-    public static void radixsort(int[] input) {
+    public static void radixSort(int[] input) {
 
         List<Integer>[] buckets = new ArrayList[10];
         for (int i = 0; i < buckets.length; i++) {
@@ -89,6 +89,76 @@ public class Sorter {
             divisor *= 10;
         }
     }
+    public static void timSort(int[] arr) {
+        if(arr.length < 10){
+            insertionSort(arr);
+            System.out.println(Arrays.toString(arr));
+            return;
+        }
+        int[] subArr1 = new int[arr.length/2];
+        int[] subArr2 = arr.length%2 != 0? new int[arr.length/2 + 1] : new int[arr.length/2];
+
+        fillSubArrs(subArr1, subArr2, arr);
+        timSort(subArr1);
+        System.out.println("SubArr1: " + Arrays.toString(subArr1));
+        timSort(subArr2);
+        System.out.println("SubArr2: " + Arrays.toString(subArr2));
+        int[] tmp = mergeAscendingOrdered(subArr1, subArr2);
+        System.arraycopy(tmp, 0, arr, 0, tmp.length);
+        System.out.println("MERGED: " + Arrays.toString(arr));
+    }
+
+    public static void insertionSort(int[] arr){
+        int j;
+        for( int gap = arr.length / 2; gap > 0; gap /= 2 ) {
+            for (int i = gap; i < arr.length; i++) {
+                int temp = arr[i];
+                for (j = i; j >= gap && arr[j - gap] > temp; j -= gap) {
+                    arr[j] = arr[j - gap];
+                }
+                arr[j] = temp;
+            }
+        }
+    }
+
+    public static void fillSubArrs(int[] subArr1, int[] subArr2, int[] arr){
+        for(int i = 0, j = arr.length/2; i < subArr1.length; i++){
+            subArr1[i] = arr[i];
+            subArr2[i] = arr[j];
+            j++;
+        }
+        if(arr.length%2 != 0){
+            subArr2[subArr2.length-1] = arr[arr.length-1];
+        }
+    }
+
+    public static int[] mergeAscendingOrdered(int[] arr1, int[] arr2) {
+        int[] result = new int[arr1.length + arr2.length];
+        int i = 0;
+        int k = 0;
+        int j = 0;
+        while (i < arr1.length && j < arr2.length) {
+            if (arr1[i] >= arr2[j]) {
+                result[k] = arr2[j];
+                j++;
+            } else if (arr1[i] < arr2[j]) {
+                result[k] = arr1[i];
+                i++;
+            }
+            k++;
+        }
+        while (i < arr1.length) {
+            result[k] = arr1[i];
+            i++;
+            k++;
+        }
+        while (j < arr2.length) {
+            result[k] = arr2[j];
+            j++;
+            k++;
+        }
+        return result;
+    }
     public static void main(String[] args) {
         int[] arr = {23, 8, 19, 10, 1, 17};
         quickSort(arr, 0, arr.length - 1);
@@ -97,10 +167,29 @@ public class Sorter {
         countingSort(arr1);
         System.out.println(Arrays.toString(arr1));
         int[] arr2 = {70, 45, 175, 930, 22, 2, 245, 66,23,11,3,121,64};
-        radixsort(arr2);
+        radixSort(arr2);
         System.out.println(Arrays.toString(arr2));
-
+        System.out.println("-----------------------------------------------------------------------");
+        int[] arr3 = {70, 45, 175, 930, 22, 2, 245, 66,23,11,3,121,64,432, 5, 11,32,543, 57, 0, 221, 2,54};
+        timSort(arr3);
     }
 
+//    public static void timSort(int[] arr) {
+//        if(arr.length < 6){
+//            insertionSort(arr);
+//            System.out.println(Arrays.toString(arr));
+//            return;
+//        }
+//        int subArr1[] = new int[arr.length/2];
+//        int subArr2[];
+//        if(arr.length %2 != 0){
+//            subArr2 = new int[arr.length/2 + 1];
+//        } else subArr2 = new int[arr.length/2];
+//        fillSubArrs(subArr1, subArr2, arr);
+//        timSort(subArr1);
+//        timSort(subArr2);
+//        arr = mergeAscendingOrdered(subArr1, subArr2);
+//        System.out.println(Arrays.toString(arr));
+//    }
 
 }
